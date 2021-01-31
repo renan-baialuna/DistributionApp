@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		802484D225C50331004FE0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484D125C50331004FE0EF /* AppDelegate.swift */; };
 		802484D425C50331004FE0EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484D325C50331004FE0EF /* SceneDelegate.swift */; };
-		802484D625C50331004FE0EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484D525C50331004FE0EF /* ViewController.swift */; };
+		802484D625C50331004FE0EF /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484D525C50331004FE0EF /* DeliveryListViewController.swift */; };
 		802484D925C50331004FE0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802484D725C50331004FE0EF /* Main.storyboard */; };
 		802484DC25C50331004FE0EF /* DeliveriesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 802484DA25C50331004FE0EF /* DeliveriesApp.xcdatamodeld */; };
 		802484DE25C50335004FE0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802484DD25C50335004FE0EF /* Assets.xcassets */; };
 		802484E125C50335004FE0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802484DF25C50335004FE0EF /* LaunchScreen.storyboard */; };
 		802484EC25C50335004FE0EF /* DeliveriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484EB25C50335004FE0EF /* DeliveriesAppTests.swift */; };
 		802484F725C50335004FE0EF /* DeliveriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484F625C50335004FE0EF /* DeliveriesAppUITests.swift */; };
+		80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12EE25C7027B006D1519 /* Delivery.swift */; };
+		80FE12F725C70F6F006D1519 /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		802484CE25C50331004FE0EF /* DeliveriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeliveriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		802484D125C50331004FE0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		802484D325C50331004FE0EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		802484D525C50331004FE0EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		802484D525C50331004FE0EF /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
 		802484D825C50331004FE0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		802484DB25C50331004FE0EF /* DeliveriesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeliveriesApp.xcdatamodel; sourceTree = "<group>"; };
 		802484DD25C50335004FE0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		802484F225C50335004FE0EF /* DeliveriesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveriesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		802484F625C50335004FE0EF /* DeliveriesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesAppUITests.swift; sourceTree = "<group>"; };
 		802484F825C50335004FE0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FE12EE25C7027B006D1519 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
+		80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,10 @@
 		802484D025C50331004FE0EF /* DeliveriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				80FE12ED25C7025F006D1519 /* Models */,
 				802484D125C50331004FE0EF /* AppDelegate.swift */,
 				802484D325C50331004FE0EF /* SceneDelegate.swift */,
-				802484D525C50331004FE0EF /* ViewController.swift */,
+				802484D525C50331004FE0EF /* DeliveryListViewController.swift */,
 				802484D725C50331004FE0EF /* Main.storyboard */,
 				802484DD25C50335004FE0EF /* Assets.xcassets */,
 				802484DF25C50335004FE0EF /* LaunchScreen.storyboard */,
@@ -129,6 +134,15 @@
 				802484F825C50335004FE0EF /* Info.plist */,
 			);
 			path = DeliveriesAppUITests;
+			sourceTree = "<group>";
+		};
+		80FE12ED25C7025F006D1519 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80FE12EE25C7027B006D1519 /* Delivery.swift */,
+				80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802484D625C50331004FE0EF /* ViewController.swift in Sources */,
+				802484D625C50331004FE0EF /* DeliveryListViewController.swift in Sources */,
 				802484D225C50331004FE0EF /* AppDelegate.swift in Sources */,
 				802484D425C50331004FE0EF /* SceneDelegate.swift in Sources */,
 				802484DC25C50331004FE0EF /* DeliveriesApp.xcdatamodeld in Sources */,
+				80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */,
+				80FE12F725C70F6F006D1519 /* DeliveryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
