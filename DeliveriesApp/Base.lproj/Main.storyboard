@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--My Parcels-->
         <scene sceneID="KqH-6a-Vf7">
             <objects>
                 <viewController id="uKZ-ox-4JV" customClass="DeliveryListViewController" customModule="DeliveriesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,7 +209,7 @@
                             <constraint firstItem="BT4-Sv-oX2" firstAttribute="top" secondItem="zAr-ep-RKs" secondAttribute="top" id="uQT-s4-IqG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="FYy-Aw-epH"/>
+                    <tabBarItem key="tabBarItem" title="My Parcels" image="list.triangle" catalog="system" selectedImage="list.triangle" id="FYy-Aw-epH"/>
                     <connections>
                         <outlet property="DeliveryList" destination="aGS-xd-FbV" id="Bwn-sI-Jun"/>
                         <outlet property="heightCont" destination="g84-7O-hoX" id="rkf-0v-x7M"/>
@@ -235,15 +235,69 @@
                     </tabBar>
                     <connections>
                         <segue destination="uKZ-ox-4JV" kind="relationship" relationship="viewControllers" id="EFA-Q5-zKO"/>
+                        <segue destination="Yg7-xg-lel" kind="relationship" relationship="viewControllers" id="N33-Gv-mHT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFe-eB-SLK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-465" y="78"/>
+            <point key="canvasLocation" x="-49" y="150"/>
+        </scene>
+        <!--Send Parcel-->
+        <scene sceneID="kWp-i8-1Am">
+            <objects>
+                <viewController id="Yg7-xg-lel" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VEG-Oh-d7X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc3-g8-zFv">
+                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="SE2-b6-LGx">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="171"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SE2-b6-LGx" id="0tZ-rR-x7C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG3-pP-RAi">
+                                <rect key="frame" x="20" y="44" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RKb-ek-Trx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s3l-Ve-VWz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s3l-Ve-VWz" firstAttribute="trailing" secondItem="gG3-pP-RAi" secondAttribute="trailing" constant="20" id="FrI-Nu-qhk"/>
+                            <constraint firstItem="Lc3-g8-zFv" firstAttribute="trailing" secondItem="s3l-Ve-VWz" secondAttribute="trailing" id="KJC-aQ-bew"/>
+                            <constraint firstItem="Lc3-g8-zFv" firstAttribute="bottom" secondItem="s3l-Ve-VWz" secondAttribute="bottom" id="PKf-Kb-JzL"/>
+                            <constraint firstItem="gG3-pP-RAi" firstAttribute="top" secondItem="s3l-Ve-VWz" secondAttribute="top" id="YsO-Sh-tKY"/>
+                            <constraint firstItem="Lc3-g8-zFv" firstAttribute="leading" secondItem="s3l-Ve-VWz" secondAttribute="leading" id="ghL-sY-sg2"/>
+                            <constraint firstItem="Lc3-g8-zFv" firstAttribute="top" secondItem="gG3-pP-RAi" secondAttribute="bottom" id="sTk-U3-YAG"/>
+                            <constraint firstItem="gG3-pP-RAi" firstAttribute="leading" secondItem="s3l-Ve-VWz" secondAttribute="leading" constant="20" id="wiy-D3-Lrh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Send Parcel" image="cube.box" catalog="system" selectedImage="shippingbox" id="yQw-aj-W1K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWj-Cw-1Zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.95652173913049" y="150"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="cube.box" catalog="system" width="128" height="124"/>
+        <image name="list.triangle" catalog="system" width="128" height="91"/>
+        <image name="shippingbox" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

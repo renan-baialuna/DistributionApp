@@ -124,3 +124,13 @@ extension DeliveryListViewController: UITableViewDelegate, UITableViewDataSource
     
     
 }
+
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(self,
+                                 tableName: "LocalizableString",
+                                 bundle: .main,
+                                 value: self,
+                                 comment: self)
+    }
+}

@@ -31,9 +31,9 @@ struct Delivery {
         get {
             switch status {
             case .inTransit:
-                return "in transit"
+                return "In transit".localized()
             case .delivered:
-                return "Delivered"
+                return "Delivered".localized()
             }
         }
     }

@@ -18,6 +18,7 @@
 		802484F725C50335004FE0EF /* DeliveriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484F625C50335004FE0EF /* DeliveriesAppUITests.swift */; };
 		80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12EE25C7027B006D1519 /* Delivery.swift */; };
 		80FE12F725C70F6F006D1519 /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */; };
+		80FE130A25C75A9B006D1519 /* LocalizableString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80FE130C25C75A9B006D1519 /* LocalizableString.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 		802484F825C50335004FE0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80FE12EE25C7027B006D1519 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
 		80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
+		80FE130125C75601006D1519 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		80FE130B25C75A9B006D1519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizableString.strings; sourceTree = "<group>"; };
+		80FE131025C75AA5006D1519 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LocalizableString.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				802484DF25C50335004FE0EF /* LaunchScreen.storyboard */,
 				802484E225C50335004FE0EF /* Info.plist */,
 				802484DA25C50331004FE0EF /* DeliveriesApp.xcdatamodeld */,
+				80FE130C25C75A9B006D1519 /* LocalizableString.strings */,
 			);
 			path = DeliveriesApp;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 802484C525C50331004FE0EF;
 			productRefGroup = 802484CF25C50331004FE0EF /* Products */;
@@ -250,6 +256,7 @@
 			files = (
 				802484E125C50335004FE0EF /* LaunchScreen.storyboard in Resources */,
 				802484DE25C50335004FE0EF /* Assets.xcassets in Resources */,
+				80FE130A25C75A9B006D1519 /* LocalizableString.strings in Resources */,
 				802484D925C50331004FE0EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +327,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				802484D825C50331004FE0EF /* Base */,
+				80FE130125C75601006D1519 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -332,6 +340,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		80FE130C25C75A9B006D1519 /* LocalizableString.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80FE130B25C75A9B006D1519 /* en */,
+				80FE131025C75AA5006D1519 /* pt-BR */,
+			);
+			name = LocalizableString.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -339,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -400,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

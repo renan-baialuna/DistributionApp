@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Last Update"; ObjectID = "2mS-h7-0pA"; */
+"2mS-h7-0pA.text" = "Last Update";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "3de-Hg-vTR"; */
+"3de-Hg-vTR.normalTitle" = "Limpar";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "FYy-Aw-epH"; */
+"FYy-Aw-epH.title" = "Item";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "QcM-Wc-im5"; */
+"QcM-Wc-im5.text" = "ID";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "fGb-f6-Y38"; */
+"fGb-f6-Y38.normalTitle" = "Filtrar";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "llp-tE-R8g"; */
+"llp-tE-R8g.text" = "Status";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zhM-Ha-4fB"; */
+"zhM-Ha-4fB.text" = "Label";
