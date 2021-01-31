@@ -9,10 +9,13 @@ import UIKit
 
 class DeliveryListViewController: UIViewController {
     var topHidden = true
+    var isFiltered = false
     
     
     var deliveryList: [Delivery] = []
+    var filteredList: [Delivery] = []
     
+    @IBOutlet weak var searchTextFiled: UITextField!
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchView: UIView!
@@ -41,10 +44,7 @@ class DeliveryListViewController: UIViewController {
         let deli2 = Delivery(id: "2", status: .delivered, lastUpdate: someDateTime2!, porcentage: 80)
         deliveryList.append(deli1)
         deliveryList.append(deli1)
-        deliveryList.append(deli1)
-        deliveryList.append(deli1)
-        deliveryList.append(deli1)
-        deliveryList.append(deli1)
+        deliveryList.append(deli2)
         deliveryList.append(deli2)
         
         DeliveryList.reloadData()
@@ -52,7 +52,24 @@ class DeliveryListViewController: UIViewController {
 
     @IBAction func changeTop() {
         setTopVisible(!topHidden)
+    }
+    
+    @IBAction func filterList() {
+        isFiltered = true
         
+        filterData(searchTextFiled.text!)
+        DeliveryList.reloadData()
+    }
+    
+    @IBAction func clearFilter() {
+        isFiltered = false
+        DeliveryList.reloadData()
+    }
+    
+    func filterData(_ id: String) {
+        filteredList = deliveryList.filter {
+            $0.id == id
+        }
     }
     
     func setTopVisible(_ statusTop: Bool) {
@@ -74,11 +91,20 @@ class DeliveryListViewController: UIViewController {
 
 extension DeliveryListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return deliveryList.count
+        if isFiltered {
+            return filteredList.count
+        } else {
+            return deliveryList.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let delivery = deliveryList[indexPath.row]
+        var delivery: Delivery
+        if isFiltered {
+            delivery = filteredList[indexPath.row]
+        } else {
+            delivery = deliveryList[indexPath.row]
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryTableViewCell") as! DeliveryTableViewCell
         cell.idLabel.text = delivery.id
         cell.statuLabel.text = delivery.statusString
