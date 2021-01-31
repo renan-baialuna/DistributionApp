@@ -111,6 +111,7 @@
                                             <outlet property="idLabel" destination="QcM-Wc-im5" id="bbE-Ov-5KB"/>
                                             <outlet property="lastUpdateLabel" destination="2mS-h7-0pA" id="2jV-8Q-3aC"/>
                                             <outlet property="statuLabel" destination="llp-tE-R8g" id="Zyc-fb-tU7"/>
+                                            <outlet property="statusProgressView" destination="vOH-4d-bhp" id="Jrn-u6-E9z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -160,13 +161,13 @@
                                             <constraint firstAttribute="height" constant="180" id="rtk-XH-uwy"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLr-rg-O5j">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLr-rg-O5j">
                                         <rect key="frame" x="8" y="50" width="398" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Yds-SB-bWY"/>
                                         </constraints>
-                                        <state key="normal" title="Track Parcel"/>
+                                        <state key="normal" image="arrow.down" catalog="system"/>
                                         <connections>
                                             <action selector="changeTop" destination="uKZ-ox-4JV" eventType="touchUpInside" id="HLN-zU-LuW"/>
                                         </connections>
@@ -201,6 +202,7 @@
                         <outlet property="DeliveryList" destination="aGS-xd-FbV" id="Bwn-sI-Jun"/>
                         <outlet property="heightCont" destination="g84-7O-hoX" id="rkf-0v-x7M"/>
                         <outlet property="searchView" destination="Eit-cw-Mhq" id="bhD-2v-dY4"/>
+                        <outlet property="topButton" destination="OLr-rg-O5j" id="5lZ-0b-cBZ"/>
                         <outlet property="topView" destination="BT4-Sv-oX2" id="MSG-zC-7zy"/>
                     </connections>
                 </viewController>
@@ -228,6 +230,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

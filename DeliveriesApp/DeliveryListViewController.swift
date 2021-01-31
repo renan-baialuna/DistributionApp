@@ -13,7 +13,7 @@ class DeliveryListViewController: UIViewController {
     
     var deliveryList: [Delivery] = []
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var heightCont: NSLayoutConstraint!
@@ -29,16 +29,23 @@ class DeliveryListViewController: UIViewController {
         setTopVisible(false)
         setMock()
         
-        // Do any additional setup after loading the view.
     }
     
     func setMock() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let someDateTime = formatter.date(from: "2016/10/08 22:31")
+        let someDateTime1 = formatter.date(from: "2016/10/08 22:31")
+        let someDateTime2 = formatter.date(from: "2019/10/10 22:31")
         
-        let deli1 = Delivery(id: "1", status: .inTransit, lastUpdate: someDateTime!, porcentage: 15)
+        let deli1 = Delivery(id: "1", status: .inTransit, lastUpdate: someDateTime1!, porcentage: 15)
+        let deli2 = Delivery(id: "2", status: .delivered, lastUpdate: someDateTime2!, porcentage: 80)
         deliveryList.append(deli1)
+        deliveryList.append(deli1)
+        deliveryList.append(deli1)
+        deliveryList.append(deli1)
+        deliveryList.append(deli1)
+        deliveryList.append(deli1)
+        deliveryList.append(deli2)
         
         DeliveryList.reloadData()
     }
@@ -50,9 +57,13 @@ class DeliveryListViewController: UIViewController {
     
     func setTopVisible(_ statusTop: Bool) {
         if statusTop {
+            let image = UIImage(systemName: "arrow.up", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))
+            topButton.setImage(image!, for: .normal)
             heightCont.constant = CGFloat(300)
             searchView.isHidden = false
         } else {
+            let image = UIImage(systemName: "arrow.down", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))
+            topButton.setImage(image!, for: .normal)
             heightCont.constant = CGFloat(100)
             searchView.isHidden = true
         }
@@ -67,8 +78,17 @@ extension DeliveryListViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let delivery = deliveryList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryTableViewCell") as! DeliveryTableViewCell
-        cell.idLabel.text = "1"
+        cell.idLabel.text = delivery.id
+        cell.statuLabel.text = delivery.statusString
+        cell.lastUpdateLabel.text = delivery.lastUpdateString
+        if delivery.status == .delivered {
+            cell.statusProgressView.isHidden = true
+        } else {
+            cell.statusProgressView.setProgress(Float(delivery.porcentage)/100, animated: false)
+        }
+        
         return cell
     }
     
