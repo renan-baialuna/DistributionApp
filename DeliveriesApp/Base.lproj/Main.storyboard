@@ -245,7 +245,7 @@
         <!--Send Parcel-->
         <scene sceneID="kWp-i8-1Am">
             <objects>
-                <viewController id="Yg7-xg-lel" sceneMemberID="viewController">
+                <viewController id="Yg7-xg-lel" customClass="NewDeliveryViewController" customModule="DeliveriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VEG-Oh-d7X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,7 +254,7 @@
                                 <rect key="frame" x="0.0" y="84" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="SE2-b6-LGx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemTableViewCell" rowHeight="171" id="SE2-b6-LGx" customClass="MenuItemTableViewCell" customModule="DeliveriesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SE2-b6-LGx" id="0tZ-rR-x7C">
@@ -287,6 +287,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Send Parcel" image="cube.box" catalog="system" selectedImage="shippingbox" id="yQw-aj-W1K"/>
+                    <connections>
+                        <outlet property="menuTable" destination="Lc3-g8-zFv" id="lcg-dJ-uYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWj-Cw-1Zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
