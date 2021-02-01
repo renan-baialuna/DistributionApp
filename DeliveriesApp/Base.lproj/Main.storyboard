@@ -293,6 +293,36 @@
                                                 <constraint firstItem="g1b-qO-IGL" firstAttribute="leading" secondItem="0tZ-rR-x7C" secondAttribute="leadingMargin" constant="5" id="pSv-xT-fVS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textEntry" destination="SwM-Iu-d0r" id="wlf-Ao-dEM"/>
+                                            <outlet property="titleLabel" destination="iBa-eP-4vG" id="ptq-bj-wrD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonTableViewCell" rowHeight="121" id="cRu-Eq-Omz" customClass="ButtonTableViewCell" customModule="DeliveriesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="199" width="414" height="121"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cRu-Eq-Omz" id="2fo-Jr-O08">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFN-yE-ZN1">
+                                                    <rect key="frame" x="40" y="31" width="334" height="59"/>
+                                                    <color key="backgroundColor" red="0.60627448559999997" green="0.1105902269" blue="0.12154255059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="saveData" destination="cRu-Eq-Omz" eventType="touchUpInside" id="KpU-fb-1XV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JFN-yE-ZN1" firstAttribute="centerX" secondItem="2fo-Jr-O08" secondAttribute="centerX" id="FnC-Ex-BZB"/>
+                                                <constraint firstItem="JFN-yE-ZN1" firstAttribute="centerY" secondItem="2fo-Jr-O08" secondAttribute="centerY" id="YGN-wQ-xmx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JFN-yE-ZN1" secondAttribute="trailing" constant="20" id="aTe-IJ-Ixn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JFN-yE-ZN1" secondAttribute="bottom" constant="20" id="iLO-8p-GbW"/>
+                                                <constraint firstItem="JFN-yE-ZN1" firstAttribute="top" secondItem="2fo-Jr-O08" secondAttribute="topMargin" constant="20" id="qFY-7F-VPa"/>
+                                                <constraint firstItem="JFN-yE-ZN1" firstAttribute="leading" secondItem="2fo-Jr-O08" secondAttribute="leadingMargin" constant="20" id="wJP-fB-zY7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

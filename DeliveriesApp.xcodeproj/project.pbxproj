@@ -20,6 +20,8 @@
 		8067A58225C7A3E600AB9B78 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */; };
 		8067A58A25C855A600AB9B78 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A58925C855A600AB9B78 /* SectionData.swift */; };
 		8067A59725C858FD00AB9B78 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A59625C858FD00AB9B78 /* SectionView.swift */; };
+		8067A59D25C87CB800AB9B78 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */; };
+		8067A5A625C8868400AB9B78 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A5A525C8868400AB9B78 /* PersonalData.swift */; };
 		80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12EE25C7027B006D1519 /* Delivery.swift */; };
 		80FE12F725C70F6F006D1519 /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */; };
 		80FE130A25C75A9B006D1519 /* LocalizableString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80FE130C25C75A9B006D1519 /* LocalizableString.strings */; };
@@ -62,6 +64,8 @@
 		8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		8067A58925C855A600AB9B78 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		8067A59625C858FD00AB9B78 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		8067A5A525C8868400AB9B78 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		80FE12EE25C7027B006D1519 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
 		80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
 		80FE130125C75601006D1519 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		802484D025C50331004FE0EF /* DeliveriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				8067A5AA25C886E000AB9B78 /* Cells */,
 				8067A57825C79E7400AB9B78 /* ViewControllers */,
 				80FE12ED25C7025F006D1519 /* Models */,
 				802484D125C50331004FE0EF /* AppDelegate.swift */,
@@ -152,12 +157,20 @@
 		8067A57825C79E7400AB9B78 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */,
+				8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */,
 				802484D525C50331004FE0EF /* DeliveryListViewController.swift */,
 				8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */,
-				8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */,
 				8067A59625C858FD00AB9B78 /* SectionView.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8067A5AA25C886E000AB9B78 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		80FE12ED25C7025F006D1519 /* Models */ = {
@@ -166,6 +179,7 @@
 				80FE12EE25C7027B006D1519 /* Delivery.swift */,
 				80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */,
 				8067A58925C855A600AB9B78 /* SectionData.swift */,
+				8067A5A525C8868400AB9B78 /* PersonalData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				802484D625C50331004FE0EF /* DeliveryListViewController.swift in Sources */,
+				8067A59D25C87CB800AB9B78 /* ButtonTableViewCell.swift in Sources */,
 				802484D225C50331004FE0EF /* AppDelegate.swift in Sources */,
 				8067A59725C858FD00AB9B78 /* SectionView.swift in Sources */,
 				8067A57A25C79EA300AB9B78 /* NewDeliveryViewController.swift in Sources */,
@@ -312,6 +327,7 @@
 				8067A58225C7A3E600AB9B78 /* MenuItemTableViewCell.swift in Sources */,
 				80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */,
 				80FE12F725C70F6F006D1519 /* DeliveryTableViewCell.swift in Sources */,
+				8067A5A625C8868400AB9B78 /* PersonalData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
