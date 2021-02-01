@@ -260,6 +260,38 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SE2-b6-LGx" id="0tZ-rR-x7C">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-qO-IGL">
+                                                    <rect key="frame" x="25" y="16" width="364" height="139"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBa-eP-4vG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="67"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-Iu-d0r">
+                                                            <rect key="frame" x="0.0" y="72" width="364" height="67"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="SwM-Iu-d0r" secondAttribute="trailing" id="1wX-Px-KTt"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SwM-Iu-d0r" secondAttribute="bottom" id="D88-2p-NdN"/>
+                                                        <constraint firstItem="iBa-eP-4vG" firstAttribute="leading" secondItem="g1b-qO-IGL" secondAttribute="leading" id="Np9-Xv-PUx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iBa-eP-4vG" secondAttribute="trailing" id="VVP-Ce-PsC"/>
+                                                        <constraint firstItem="SwM-Iu-d0r" firstAttribute="leading" secondItem="g1b-qO-IGL" secondAttribute="leading" id="hrP-UW-GiK"/>
+                                                        <constraint firstItem="iBa-eP-4vG" firstAttribute="top" secondItem="g1b-qO-IGL" secondAttribute="top" id="l5F-rF-7wX"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="g1b-qO-IGL" secondAttribute="trailing" constant="5" id="FMU-Ch-z27"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="g1b-qO-IGL" secondAttribute="bottom" constant="5" id="Onb-Bs-rk1"/>
+                                                <constraint firstItem="g1b-qO-IGL" firstAttribute="top" secondItem="0tZ-rR-x7C" secondAttribute="topMargin" constant="5" id="dTz-pD-TCg"/>
+                                                <constraint firstItem="g1b-qO-IGL" firstAttribute="leading" secondItem="0tZ-rR-x7C" secondAttribute="leadingMargin" constant="5" id="pSv-xT-fVS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
