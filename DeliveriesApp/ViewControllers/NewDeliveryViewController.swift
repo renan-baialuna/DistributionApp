@@ -111,6 +111,13 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
         menuTable.reloadData()
     }
     
+    func closeAll() {
+        for i in 0..<sectionsList.count {
+            sectionsList[i].isOpen = false
+        }
+        menuTable.reloadData()
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = sectionsList[section]
@@ -134,8 +141,32 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
             cell.delegate = self
             cell.titleLabel.text = infos[indexPath.row]
             cell.row = indexPath.row
+            cell.textEntry.text = ""
+            switch indexPath.row {
+            case 0:
+                name = ""
+                cell.textEntry.keyboardType = .default
+            case 1:
+                email = ""
+                cell.textEntry.keyboardType = .emailAddress
+            case 2:
+                phone = ""
+                cell.textEntry.keyboardType = .phonePad
+            case 3:
+                address = ""
+                cell.textEntry.keyboardType = .default
+            default:
+                print("error")
+            }
+            
             return cell
         }
+    }
+    
+    func generateAlert(title: String, subTitle: String) {
+        let alert = UIAlertController(title: title, message: subTitle, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -146,9 +177,18 @@ extension NewDeliveryViewController: saveProtocol {
         if  self.name != "" && self.email != "" && self.address != "" && self.phone != "" {
             let personalData = PersonalData(name: self.name, email: self.email, phone: self.phone, adress: self.address)
             let newDeliveryData = DeliveryData(data: personalData)
-            coreManager?.saveDelivery(delivery: newDeliveryData)
+            if let core = coreManager {
+                if core.saveDelivery(delivery: newDeliveryData) {
+                    generateAlert(title: "Success", subTitle: "Delivery Saved")
+                } else {
+                    generateAlert(title: "Erro", subTitle: "There was an error saving the data, please try again")
+                }
+                closeAll()
+            }
+            
+            
         } else {
-            print("incompleto")
+            generateAlert(title: "Incomplete", subTitle: "All fields must be filled")
         }
     }
 }

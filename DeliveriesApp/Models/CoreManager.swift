@@ -12,7 +12,7 @@ import Foundation
 struct CoreManager {
     let appDelegate: AppDelegate
     
-    func saveDelivery(delivery: DeliveryData) {
+    func saveDelivery(delivery: DeliveryData) -> Bool {
         let context = appDelegate.persistentContainer.viewContext
         let newDelivery = DeliveryEntity(context: context)
         newDelivery.code = delivery.code
@@ -24,8 +24,9 @@ struct CoreManager {
         
         do {
             try context.save()
+            return true
         } catch {
-            
+            return false
         }
     }
     
