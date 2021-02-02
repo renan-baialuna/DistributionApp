@@ -141,6 +141,8 @@ extension NewDeliveryViewController: saveProtocol {
     func startSave(section: Int) {
         if  self.name != "" && self.email != "" && self.address != "" && self.phone != "" {
             let personalData = PersonalData(name: self.name, email: self.email, phone: self.phone, adress: self.address)
+            let newDeliveryData = DeliveryData(data: personalData)
+            print(newDeliveryData.code)
         } else {
             print("incompleto")
         }

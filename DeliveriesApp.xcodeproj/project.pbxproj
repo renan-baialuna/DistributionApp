@@ -16,10 +16,10 @@
 		802484E125C50335004FE0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802484DF25C50335004FE0EF /* LaunchScreen.storyboard */; };
 		802484EC25C50335004FE0EF /* DeliveriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484EB25C50335004FE0EF /* DeliveriesAppTests.swift */; };
 		802484F725C50335004FE0EF /* DeliveriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802484F625C50335004FE0EF /* DeliveriesAppUITests.swift */; };
+		8064C30725C8E1A600165E65 /* DeliveryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C30625C8E1A600165E65 /* DeliveryData.swift */; };
 		8067A57A25C79EA300AB9B78 /* NewDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */; };
 		8067A58225C7A3E600AB9B78 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */; };
 		8067A58A25C855A600AB9B78 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A58925C855A600AB9B78 /* SectionData.swift */; };
-		8067A59725C858FD00AB9B78 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A59625C858FD00AB9B78 /* SectionView.swift */; };
 		8067A59D25C87CB800AB9B78 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */; };
 		8067A5A625C8868400AB9B78 /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A5A525C8868400AB9B78 /* PersonalData.swift */; };
 		80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE12EE25C7027B006D1519 /* Delivery.swift */; };
@@ -60,10 +60,10 @@
 		802484F225C50335004FE0EF /* DeliveriesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliveriesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		802484F625C50335004FE0EF /* DeliveriesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveriesAppUITests.swift; sourceTree = "<group>"; };
 		802484F825C50335004FE0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8064C30625C8E1A600165E65 /* DeliveryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryData.swift; sourceTree = "<group>"; };
 		8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeliveryViewController.swift; sourceTree = "<group>"; };
 		8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		8067A58925C855A600AB9B78 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
-		8067A59625C858FD00AB9B78 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		8067A5A525C8868400AB9B78 /* PersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalData.swift; sourceTree = "<group>"; };
 		80FE12EE25C7027B006D1519 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
@@ -161,7 +161,6 @@
 				8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */,
 				802484D525C50331004FE0EF /* DeliveryListViewController.swift */,
 				8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */,
-				8067A59625C858FD00AB9B78 /* SectionView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +179,7 @@
 				80FE12F625C70F6F006D1519 /* DeliveryTableViewCell.swift */,
 				8067A58925C855A600AB9B78 /* SectionData.swift */,
 				8067A5A525C8868400AB9B78 /* PersonalData.swift */,
+				8064C30625C8E1A600165E65 /* DeliveryData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -318,8 +318,8 @@
 			files = (
 				802484D625C50331004FE0EF /* DeliveryListViewController.swift in Sources */,
 				8067A59D25C87CB800AB9B78 /* ButtonTableViewCell.swift in Sources */,
+				8064C30725C8E1A600165E65 /* DeliveryData.swift in Sources */,
 				802484D225C50331004FE0EF /* AppDelegate.swift in Sources */,
-				8067A59725C858FD00AB9B78 /* SectionView.swift in Sources */,
 				8067A57A25C79EA300AB9B78 /* NewDeliveryViewController.swift in Sources */,
 				802484D425C50331004FE0EF /* SceneDelegate.swift in Sources */,
 				802484DC25C50331004FE0EF /* DeliveriesApp.xcdatamodeld in Sources */,

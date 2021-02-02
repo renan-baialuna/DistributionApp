@@ -7,9 +7,11 @@
 
 import Foundation
 
-enum statusEnum {
-    case inTransit
-    case delivered
+enum statusEnum: Int {
+    case registered = 0
+    case leftCenter = 1
+    case inTransit = 2
+    case delivered = 3
 }
 
 struct Delivery {
@@ -34,6 +36,10 @@ struct Delivery {
                 return "In transit".localized()
             case .delivered:
                 return "Delivered".localized()
+            case .registered:
+                return "Registered"
+            case .leftCenter:
+                return "Left center"
             }
         }
     }
