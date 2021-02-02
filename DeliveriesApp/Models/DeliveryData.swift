@@ -20,7 +20,6 @@ struct DeliveryData {
         var ret = ""
         for i in 1...10 {
             let number = Int.random(in: 0...9)
-            print(number)
             ret.append(String(number))
         }
         return ret

@@ -20,7 +20,6 @@ class DeliveryListViewController: UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var heightCont: NSLayoutConstraint!
-    
     @IBOutlet weak var DeliveryList: UITableView!
     
     override func viewDidLoad() {

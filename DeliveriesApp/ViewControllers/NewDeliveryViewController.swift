@@ -17,11 +17,12 @@ protocol changeField {
 
 class NewDeliveryViewController: UIViewController {
     let sectionHeight:CGFloat = 100
-    
     var name = ""
     var email = ""
     var phone = ""
     var address = ""
+    let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+    var coreManager: CoreManager?
     
     @IBOutlet weak var menuTable: UITableView!
     
@@ -32,12 +33,15 @@ class NewDeliveryViewController: UIViewController {
         super.viewDidLoad()
         menuTable.delegate = self
         menuTable.dataSource = self
+        coreManager = CoreManager(appDelegate: appDelegate)
         
         let section1 = SectionData(title: "Large", subTitle: "1-2 days", itens: infos, imageName: "IconSmall")
         let section2 = SectionData(title: "Medium", subTitle: "1-3 days", itens: infos, imageName: "IconSmall")
         let section3 = SectionData(title: "Small", subTitle: "1-5 days", itens: infos, imageName: "IconSmall")
         let section4 = SectionData(title: "Custom", subTitle: "5-10 days", itens: infos, imageName: "IconSmall")
         sectionsList = [section1, section2, section3, section4]
+        
+        let total = coreManager?.getAllDeliveries()
         
     }
     
@@ -142,7 +146,7 @@ extension NewDeliveryViewController: saveProtocol {
         if  self.name != "" && self.email != "" && self.address != "" && self.phone != "" {
             let personalData = PersonalData(name: self.name, email: self.email, phone: self.phone, adress: self.address)
             let newDeliveryData = DeliveryData(data: personalData)
-            print(newDeliveryData.code)
+            coreManager?.saveDelivery(delivery: newDeliveryData)
         } else {
             print("incompleto")
         }
