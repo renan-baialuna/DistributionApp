@@ -36,9 +36,9 @@ class NewDeliveryViewController: UIViewController {
         coreManager = CoreManager(appDelegate: appDelegate)
         
         let section1 = SectionData(title: "Large", subTitle: "1-2 days", itens: infos, imageName: "IconSmall")
-        let section2 = SectionData(title: "Medium", subTitle: "1-3 days", itens: infos, imageName: "IconSmall")
-        let section3 = SectionData(title: "Small", subTitle: "1-5 days", itens: infos, imageName: "IconSmall")
-        let section4 = SectionData(title: "Custom", subTitle: "5-10 days", itens: infos, imageName: "IconSmall")
+        let section2 = SectionData(title: "Medium", subTitle: "1-3 days", itens: infos, imageName: "IconMedium")
+        let section3 = SectionData(title: "Small", subTitle: "1-5 days", itens: infos, imageName: "IconLarge")
+        let section4 = SectionData(title: "Custom", subTitle: "5-10 days", itens: infos, imageName: "IconCustom")
         sectionsList = [section1, section2, section3, section4]
         
         let total = coreManager?.getAllDeliveries()

@@ -17,7 +17,6 @@ class MenuItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         textEntry.delegate = self
-        backgroundColor = UIColor.green
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

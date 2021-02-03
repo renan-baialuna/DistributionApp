@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +41,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="background"/>
                                                             <constraints>
                                                                 <constraint firstItem="QcM-Wc-im5" firstAttribute="centerY" secondItem="h1K-wm-ywG" secondAttribute="centerY" id="CTa-vA-phl"/>
                                                                 <constraint firstAttribute="trailing" secondItem="QcM-Wc-im5" secondAttribute="trailing" id="qyM-Ow-hoB"/>
@@ -68,7 +69,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="background"/>
                                                             <constraints>
                                                                 <constraint firstItem="YdT-yt-Jeh" firstAttribute="leading" secondItem="4us-qo-IQU" secondAttribute="leading" constant="5" id="Jfs-BU-Jbz"/>
                                                                 <constraint firstAttribute="trailing" secondItem="YdT-yt-Jeh" secondAttribute="trailing" id="Nk9-WC-f3m"/>
@@ -83,7 +84,7 @@
                                                                     <rect key="frame" x="0.0" y="17.5" width="404" height="4"/>
                                                                 </progressView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="background"/>
                                                             <constraints>
                                                                 <constraint firstItem="vOH-4d-bhp" firstAttribute="leading" secondItem="sbI-Ck-G85" secondAttribute="leading" id="OhB-Jv-GeC"/>
                                                                 <constraint firstItem="vOH-4d-bhp" firstAttribute="centerY" secondItem="sbI-Ck-G85" secondAttribute="centerY" id="f6g-0O-PaS"/>
@@ -100,6 +101,7 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" name="background"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="otz-Lt-haN" secondAttribute="bottom" constant="5" id="hFf-Wh-akf"/>
                                                 <constraint firstItem="otz-Lt-haN" firstAttribute="top" secondItem="DjW-Y3-Omu" secondAttribute="top" constant="5" id="lwe-Vu-04J"/>
@@ -136,9 +138,11 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsh-ox-CKk">
                                                         <rect key="frame" x="0.0" y="38" width="382" height="34"/>
+                                                        <color key="backgroundColor" name="background"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="cYL-Mm-22q"/>
                                                         </constraints>
+                                                        <color key="textColor" name="detail"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -147,6 +151,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-f6-Y38">
                                                                 <rect key="frame" x="0.0" y="0.0" width="172.5" height="75"/>
+                                                                <color key="backgroundColor" name="background"/>
                                                                 <state key="normal" title="Filter"/>
                                                                 <connections>
                                                                     <action selector="filterList" destination="uKZ-ox-4JV" eventType="touchUpInside" id="SEl-c1-xhU"/>
@@ -154,6 +159,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3de-Hg-vTR">
                                                                 <rect key="frame" x="209.5" y="0.0" width="172.5" height="75"/>
+                                                                <color key="backgroundColor" name="background"/>
                                                                 <state key="normal" title="Clear"/>
                                                                 <connections>
                                                                     <action selector="clearFilter" destination="uKZ-ox-4JV" eventType="touchUpInside" id="bsx-Xf-vtA"/>
@@ -164,7 +170,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <color key="backgroundColor" name="section"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="C9g-GM-tz4" secondAttribute="trailing" constant="8" id="1OB-C3-Zs9"/>
                                             <constraint firstItem="C9g-GM-tz4" firstAttribute="leading" secondItem="Eit-cw-Mhq" secondAttribute="leading" constant="8" id="NpA-al-8jQ"/>
@@ -185,7 +191,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="backgroundColor" name="section"/>
                                 <constraints>
                                     <constraint firstItem="OLr-rg-O5j" firstAttribute="leading" secondItem="BT4-Sv-oX2" secondAttribute="leading" constant="8" id="6MK-TZ-iYu"/>
                                     <constraint firstAttribute="trailing" secondItem="OLr-rg-O5j" secondAttribute="trailing" constant="8" id="Ki1-q7-SIN"/>
@@ -198,7 +204,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WtI-Ol-X0o"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="BT4-Sv-oX2" firstAttribute="leading" secondItem="WtI-Ol-X0o" secondAttribute="leading" id="PCZ-pP-2xw"/>
                             <constraint firstItem="aGS-xd-FbV" firstAttribute="bottom" secondItem="WtI-Ol-X0o" secondAttribute="bottom" id="XFy-NE-DVx"/>
@@ -209,7 +215,9 @@
                             <constraint firstItem="BT4-Sv-oX2" firstAttribute="top" secondItem="zAr-ep-RKs" secondAttribute="top" id="uQT-s4-IqG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Parcels" image="list.triangle" catalog="system" selectedImage="list.triangle" id="FYy-Aw-epH"/>
+                    <tabBarItem key="tabBarItem" title="My Parcels" image="list.triangle" catalog="system" selectedImage="list.triangle" id="FYy-Aw-epH">
+                        <color key="badgeColor" name="detail"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="DeliveryList" destination="aGS-xd-FbV" id="Bwn-sI-Jun"/>
                         <outlet property="heightCont" destination="g84-7O-hoX" id="rkf-0v-x7M"/>
@@ -231,7 +239,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K3Q-No-brz">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="background"/>
+                        <color key="tintColor" name="detail"/>
+                        <color key="selectedImageTintColor" name="detail"/>
                     </tabBar>
                     <connections>
                         <segue destination="uKZ-ox-4JV" kind="relationship" relationship="viewControllers" id="EFA-Q5-zKO"/>
@@ -253,7 +263,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc3-g8-zFv">
                                 <rect key="frame" x="0.0" y="84" width="414" height="729"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuItemTableViewCell" rowHeight="171" id="SE2-b6-LGx" customClass="MenuItemTableViewCell" customModule="DeliveriesApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="171"/>
@@ -273,6 +283,8 @@
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SwM-Iu-d0r">
                                                             <rect key="frame" x="0.0" y="72" width="364" height="67"/>
+                                                            <color key="backgroundColor" name="background"/>
+                                                            <color key="textColor" name="detail"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
@@ -287,6 +299,7 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" name="section"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="g1b-qO-IGL" secondAttribute="trailing" constant="5" id="FMU-Ch-z27"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="g1b-qO-IGL" secondAttribute="bottom" constant="5" id="Onb-Bs-rk1"/>
@@ -338,7 +351,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s3l-Ve-VWz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="s3l-Ve-VWz" firstAttribute="trailing" secondItem="gG3-pP-RAi" secondAttribute="trailing" constant="20" id="FrI-Nu-qhk"/>
                             <constraint firstItem="Lc3-g8-zFv" firstAttribute="trailing" secondItem="s3l-Ve-VWz" secondAttribute="trailing" id="KJC-aQ-bew"/>
@@ -349,7 +362,9 @@
                             <constraint firstItem="gG3-pP-RAi" firstAttribute="leading" secondItem="s3l-Ve-VWz" secondAttribute="leading" constant="20" id="wiy-D3-Lrh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Send Parcel" image="cube.box" catalog="system" selectedImage="shippingbox" id="yQw-aj-W1K"/>
+                    <tabBarItem key="tabBarItem" title="Send Parcel" image="cube.box" catalog="system" selectedImage="shippingbox" id="yQw-aj-W1K">
+                        <color key="badgeColor" name="detail"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="menuTable" destination="Lc3-g8-zFv" id="lcg-dJ-uYu"/>
                     </connections>
@@ -548,6 +563,7 @@
             <point key="canvasLocation" x="1010.144927536232" y="882.58928571428567"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="detail"/>
     <resources>
         <image name="arrow.down" catalog="system" width="120" height="128"/>
         <image name="briefcase" catalog="system" width="128" height="102"/>
@@ -555,14 +571,17 @@
         <image name="cube.box" catalog="system" width="128" height="124"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="shippingbox" catalog="system" width="128" height="124"/>
+        <namedColor name="background">
+            <color red="0.43529411764705883" green="0.90588235294117647" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="detail">
+            <color red="0.32156862745098042" green="0.070588235294117646" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="section">
+            <color red="0.20392156862745098" green="0.56470588235294117" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
