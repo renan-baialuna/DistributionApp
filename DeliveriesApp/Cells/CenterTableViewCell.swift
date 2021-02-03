@@ -14,10 +14,13 @@ class CenterTableViewCell: UITableViewCell {
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var ocupationLabel: UILabel!
     @IBOutlet weak var ocupationBar: UIProgressView!
+    @IBOutlet weak var mainView: UIView!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        mainView.layer.cornerRadius = 10
+        mainView.layer.masksToBounds = true
         // Initialization code
     }
 

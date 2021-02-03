@@ -23,6 +23,7 @@
 		8064C34B25C9A8C100165E65 /* DistributionCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C34A25C9A8C100165E65 /* DistributionCenter.swift */; };
 		8064C35025C9D03A00165E65 /* CentersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C34F25C9D03A00165E65 /* CentersViewController.swift */; };
 		8064C35525C9E84100165E65 /* CenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C35425C9E84100165E65 /* CenterTableViewCell.swift */; };
+		8064C36125CA4B8100165E65 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C36025CA4B8100165E65 /* Colors.swift */; };
 		8067A57A25C79EA300AB9B78 /* NewDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */; };
 		8067A58225C7A3E600AB9B78 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */; };
 		8067A58A25C855A600AB9B78 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067A58925C855A600AB9B78 /* SectionData.swift */; };
@@ -73,6 +74,7 @@
 		8064C34A25C9A8C100165E65 /* DistributionCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionCenter.swift; sourceTree = "<group>"; };
 		8064C34F25C9D03A00165E65 /* CentersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersViewController.swift; sourceTree = "<group>"; };
 		8064C35425C9E84100165E65 /* CenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTableViewCell.swift; sourceTree = "<group>"; };
+		8064C36025CA4B8100165E65 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeliveryViewController.swift; sourceTree = "<group>"; };
 		8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		8067A58925C855A600AB9B78 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		802484D025C50331004FE0EF /* DeliveriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				8064C35F25CA4B6E00165E65 /* Extension */,
 				8067A5AA25C886E000AB9B78 /* Cells */,
 				8067A57825C79E7400AB9B78 /* ViewControllers */,
 				80FE12ED25C7025F006D1519 /* Models */,
@@ -166,15 +169,20 @@
 			path = DeliveriesAppUITests;
 			sourceTree = "<group>";
 		};
+		8064C35F25CA4B6E00165E65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8064C36025CA4B8100165E65 /* Colors.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		8067A57825C79E7400AB9B78 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				802484D525C50331004FE0EF /* DeliveryListViewController.swift */,
 				8067A57925C79EA300AB9B78 /* NewDeliveryViewController.swift */,
-				8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */,
-				8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */,
 				8064C34F25C9D03A00165E65 /* CentersViewController.swift */,
-				8064C35425C9E84100165E65 /* CenterTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +190,9 @@
 		8067A5AA25C886E000AB9B78 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8064C35425C9E84100165E65 /* CenterTableViewCell.swift */,
+				8067A59C25C87CB800AB9B78 /* ButtonTableViewCell.swift */,
+				8067A58125C7A3E600AB9B78 /* MenuItemTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -346,6 +357,7 @@
 				8067A58A25C855A600AB9B78 /* SectionData.swift in Sources */,
 				8064C33D25C8FDB200165E65 /* CoreManager.swift in Sources */,
 				8067A58225C7A3E600AB9B78 /* MenuItemTableViewCell.swift in Sources */,
+				8064C36125CA4B8100165E65 /* Colors.swift in Sources */,
 				80FE12EF25C7027B006D1519 /* Delivery.swift in Sources */,
 				80FE12F725C70F6F006D1519 /* DeliveryTableViewCell.swift in Sources */,
 				8064C35525C9E84100165E65 /* CenterTableViewCell.swift in Sources */,

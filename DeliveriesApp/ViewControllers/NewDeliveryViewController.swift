@@ -65,7 +65,7 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
         
         let subView = UIView()
         
-        subView.backgroundColor = UIColor.orange
+        subView.backgroundColor = UIColor.sectionColor
         
         let image = UIImage(named: sectionInfo.imageName)
         let imageView = UIImageView(image: image)
@@ -77,9 +77,11 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
         imageView.leadingAnchor.constraint(equalTo: subView.leadingAnchor).isActive = true
         
         let titleLabel = UILabel()
+        titleLabel.textColor = UIColor.detailColor
         titleLabel.text = sectionInfo.title
         
         let subTitleLabel = UILabel()
+        subTitleLabel.textColor = UIColor.selectionColor
         subTitleLabel.text = sectionInfo.subTitle
         
         
@@ -133,6 +135,7 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
         if indexPath.row == infos.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonTableViewCell") as! ButtonTableViewCell
             cell.delegate = self
+            
             cell.section = indexPath.section
             cell.selectionStyle = .none
             return cell

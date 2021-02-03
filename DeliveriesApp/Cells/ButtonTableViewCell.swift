@@ -10,9 +10,13 @@ import UIKit
 class ButtonTableViewCell: UITableViewCell {
     var section: Int = 0
     var delegate: saveProtocol? = nil
+    @IBOutlet weak var saveButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        saveButton.layer.cornerRadius = 10
+        saveButton.layer.masksToBounds = true
+        saveButton.setTitle("Save".localized(), for: .normal)
         // Initialization code
     }
 
