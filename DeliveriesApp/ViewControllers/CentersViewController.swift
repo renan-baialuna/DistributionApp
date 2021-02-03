@@ -28,9 +28,6 @@ class CentersViewController: UIViewController {
         let center3 = DistributionCenter(id: "3", disponibility: "8-5", address: "Rua", city: "cidade", state: "estado", cep: "cep", ocupation: 100, geolocation: CLLocationCoordinate2D(latitude: -23.5439, longitude:  -46.6273))
         
         centers = [center1, center2, center3]
-        
-//        let coordinates = CLLocationCoordinate2D(latitude: -23.5413011681, longitude: -46.6399557735)
-        
         for center in centers {
             let annotation = MKPointAnnotation()
             annotation.coordinate = center.geolocation
@@ -58,11 +55,17 @@ extension CentersViewController: UITableViewDataSource, UITableViewDelegate {
         cell.adressLabel.text = "\(center.city), \(center.state) - \(center.cep)"
         cell.ocupationLabel.text = "\(center.ocupation)%"
         cell.ocupationBar.progress = Float(center.ocupation)/100
+        cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let region = MKCoordinateRegion(center: centers[indexPath.row].geolocation, latitudinalMeters: 500, longitudinalMeters: 500)
+        map.setRegion(region, animated: true)
     }
 }

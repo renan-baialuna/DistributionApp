@@ -134,6 +134,7 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
             let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonTableViewCell") as! ButtonTableViewCell
             cell.delegate = self
             cell.section = indexPath.section
+            cell.selectionStyle = .none
             return cell
             
         } else {
@@ -158,7 +159,7 @@ extension NewDeliveryViewController: UITableViewDelegate, UITableViewDataSource 
             default:
                 print("error")
             }
-            
+            cell.selectionStyle = .none
             return cell
         }
     }
